@@ -12,10 +12,10 @@ const formattedDate = (date: string) =>
 ---
 
 <LayoutSite title={title}>
-  <div id="markdown" class="py-10 px-6 mx-auto max-w-7xl space-y-10">
+  <div id='markdown' class='py-10 px-6 mx-auto max-w-7xl space-y-10'>
     <h1>{title}</h1>
     <p>{formattedDate(date)}</p>
-    <hr class="my-4 border-zinc-500" />
+    <hr class='my-4 border-zinc-500' />
     <slot />
   </div>
 </LayoutSite>
