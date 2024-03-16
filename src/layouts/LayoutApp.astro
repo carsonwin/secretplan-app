@@ -12,15 +12,20 @@ const { title = 'Secretplan' } = Astro.props
 
     <script>
       import * as htmx from 'htmx.org'
+      import Alpine from 'alpinejs'
 
       declare global {
         interface Window {
           htmx: any
+          Alpine: any
         }
       }
 
-      // in case we want to access the htmx object in other pages
+      // optional, to access object elsewhere
       window.htmx = htmx
+      window.Alpine = Alpine
+
+      Alpine.start()
 
       htmx.process(document.body)
     </script>
